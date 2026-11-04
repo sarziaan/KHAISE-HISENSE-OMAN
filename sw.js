@@ -1,4 +1,4 @@
-const CACHE = 'khaise-hisense-oman-v3';
+const CACHE = 'khaise-hisense-oman-v5';
 const CORE = ['./', './index.html', './manifest.json', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(CORE.map(u => c.add(u).catch(() => null)))).then(() => self.skipWaiting()));
